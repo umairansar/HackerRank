@@ -1,0 +1,23 @@
+def myActions(mylist, Direct): 
+    if Direct[0] == 'insert':
+        mylist.insert(int(Direct[1]), int(Direct[2]))
+    elif Direct[0] == 'remove':
+        mylist.remove(int(Direct[1]))
+    elif Direct[0] == 'sort':
+        mylist.sort()
+    elif Direct[0] == 'reverse':
+        mylist.reverse()
+    elif Direct[0] == 'append':
+        mylist.append(int(Direct[1]))
+    elif Direct[0] == 'pop':
+        mylist.pop()
+    elif Direct[0] == 'print':
+        print(mylist)
+    else: 
+        return 0
+
+ 
+mylist = []
+for command in range(0,int(input())):
+    Direct = [str(i) for i in input().split()]
+    myActions(mylist, Direct)
