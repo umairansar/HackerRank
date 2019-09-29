@@ -1,0 +1,15 @@
+def MyNestedList(students,scores):
+    minimum = scores[0][0]
+    for i in range(students):
+        if minimum > scores[i][0]:
+            secMin = minimum
+            minimum = scores[i][0]
+    print(secMin)
+
+for _ in range(int(input())):
+    name = [input()]
+    name.append(name)
+    score = [float(input())]
+    score.append(score)
+    MyNestedList(name, score)
+    #need for debugging to fit edge cases
